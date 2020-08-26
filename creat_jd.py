@@ -49,8 +49,19 @@ for content_ in icon_contents:
     try:
         if content_.content:
             target_repo.create_file(path=content_.path, 
-                                    content=base64.b64decode(content_.content).decode("utf-8"), 
+                                    content=base64.b64decode(content_.content).decode("gbk"), 
                                     message="create")
     except Exception as e:
         print(content_)
+        print(e)
+        
+for content_ in icon_contents:
+    try:
+        if content_.content:
+            target_repo.create_file(path=content_.path, 
+                                    content=base64.b64decode(content_.content).decode("gbk"), 
+                                    message="create")
+    except Exception as e:
+        print(content_)
+        print(1)
         print(e)
