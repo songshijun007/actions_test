@@ -2,6 +2,8 @@ from github import Github
 import base64
 import os
 
+git_token = os.environ["git_token"]
+
 g = Github(git_token)  # safer alternative, if you have an access token
 u = g.get_user()
 
