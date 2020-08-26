@@ -20,7 +20,9 @@ jobs:
         python-version: '3.x'
     - name: pip
       run: |
-          pip install requests
+          pip install pygithub
     - name: get ip
       run: |
-        python3 get_ip.py
+        python3 creat_jd.py
+      env:
+        git_token: ${{ secrets.git_token }}
