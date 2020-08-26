@@ -32,6 +32,7 @@ for content_ in contents:
                                     content=base64.b64decode(content_.content).decode("utf-8"), 
                                     message="create")
     except Exception as e:
+        print(content_)
         print(e)
 
 for content_ in workflows_contents:
@@ -41,6 +42,7 @@ for content_ in workflows_contents:
                                     content=base64.b64decode(content_.content).decode("utf-8"), 
                                     message="create")
     except Exception as e:
+        print(content_)
         print(e)
         
 for content_ in icon_contents:
@@ -50,4 +52,5 @@ for content_ in icon_contents:
                                     content=base64.b64decode(content_.content).decode("utf-8"), 
                                     message="create")
     except Exception as e:
+        print(content_)
         print(e)
